@@ -1,0 +1,8 @@
+# コードオーナー — 全パスの変更にレビューを必須化する。
+# ブランチ保護（Ruleset）で "Require review from Code Owners" を有効にすると、
+# ここで指定した担当のレビュー承認なしに main へマージできなくなる。
+#
+# 外部からの PR（fork）は受け付けていない（fork 無効）ため、対象は組織メンバーの PR。
+# owner は本リポジトリに admin 権限を持つ組織チーム。メンテナの増減はチームの
+# メンバー管理で行い、このファイルは変更しない。
+* @ks-rogers/ksr-slide-generator-admin

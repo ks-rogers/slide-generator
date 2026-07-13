@@ -1,0 +1,3 @@
+# このフォルダ（projects/）は git 管理対象外（ローカル限定）です。
+# 案件ファイルは追跡せず、フォルダ自体を保持するためのプレースホルダ。
+# 詳細は .gitignore の projects/* と !projects/.gitkeep を参照。

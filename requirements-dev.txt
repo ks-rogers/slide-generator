@@ -1,0 +1,4 @@
+# 開発用依存（テスト実行）。本番生成には不要。
+#   pip install -r requirements.txt -r requirements-dev.txt
+#   pytest
+pytest>=9.1.1

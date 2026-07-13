@@ -1,0 +1,16 @@
+# 前提: Python 3.10 以上（slides.py が PEP 604 記法を使用し、Pillow>=12.3 も 3.10+ 必須）
+#
+# インストール手順（venv 前提・ホスト Python を汚さない）:
+#   python3 -m venv .venv          # プロジェクト直下に venv を作成（初回のみ）
+#   source .venv/bin/activate      # 有効化
+#   pip install -r requirements.txt
+#
+# システム依存（pip 外・別途必要）: LibreOffice(soffice), cairo
+#   macOS: brew install --cask libreoffice; brew install cairo
+# soffice が無いと手順5-a の validate_render と 5-b の render_pngs が動かない。
+# cairo は add_icon を使う場合のみ必要（cairosvg のランタイム依存）。
+python-pptx==1.0.2
+PyMuPDF==1.28.0     # 5-a validate_render と 5-b render_pngs のレンダラ
+Pillow>=12.3.0
+requests>=2.34.2      # add_icon（アイコン使用時のみ）
+cairosvg>=2.9.0       # add_icon（アイコン使用時のみ）

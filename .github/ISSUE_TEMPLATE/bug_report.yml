@@ -1,0 +1,44 @@
+name: バグ報告
+description: 生成・検査・レンダリングの不具合を報告する
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **機密情報を貼らないでください。** 実在顧客名・実案件の `content.txt` /
+        `generate.py` / `output.pptx` は添付・引用しないこと。再現は同梱の
+        `examples/` のサンプルか、機密を含まない最小例で示してください。
+  - type: textarea
+    id: what
+    attributes:
+      label: 何が起きたか
+      description: 期待した挙動と、実際に起きた挙動を書いてください。
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: 再現手順
+      placeholder: |
+        1. `python3 examples/.../generate.py` を実行
+        2. ...
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: 環境
+      description: OS / Python / python-pptx・PyMuPDF・LibreOffice のバージョン
+      placeholder: |
+        - OS: macOS 14
+        - Python: 3.12
+        - python-pptx: 1.0.2 / PyMuPDF: 1.27.2 / LibreOffice: 24.x
+    validations:
+      required: false
+  - type: textarea
+    id: logs
+    attributes:
+      label: エラーログ / validate の出力
+      render: shell
+    validations:
+      required: false

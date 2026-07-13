@@ -1,0 +1,2 @@
+# 空白 Issue を禁止し、テンプレートの利用を強制する。
+blank_issues_enabled: false

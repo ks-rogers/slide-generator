@@ -1,0 +1,32 @@
+# Dependabot 設定 — 依存の脆弱性・更新を自動追跡する。
+# 参照: https://docs.github.com/code-security/dependabot/dependabot-version-updates
+version: 2
+updates:
+  # Python 依存（requirements.txt / requirements-dev.txt）
+  # AGPL の PyMuPDF など、コピーレフト依存の更新監視にも有効。
+  - package-ecosystem: "pip"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    # 更新を1本の PR にまとめて PR 乱立を防ぐ（メジャー含め全 pip 依存を集約）。
+    groups:
+      python-deps:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+
+  # GitHub Actions（.github/workflows/*.yml で使う action のバージョン）
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+    # Actions の更新も1本の PR に集約する。
+    groups:
+      github-actions:
+        patterns:
+          - "*"
+    commit-message:
+      prefix: "chore"

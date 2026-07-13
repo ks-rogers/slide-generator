@@ -1,0 +1,29 @@
+name: 機能要望・改善提案
+description: 新しいヘルパー・検査ルール・ドキュメント改善などを提案する
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本リポジトリは外部からの Pull Request（fork）を受け付けていません。
+        改善アイデアはこの Issue でお知らせください（実装は組織メンバーが行います）。
+  - type: textarea
+    id: problem
+    attributes:
+      label: 解決したい課題
+      description: 何が不便／不足しているか。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 提案内容
+      description: どう解決したいか（新ヘルパー・検査ルール・ドキュメント等）。
+    validations:
+      required: true
+  - type: textarea
+    id: alt
+    attributes:
+      label: 代替案・補足
+    validations:
+      required: false

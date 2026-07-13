@@ -1,0 +1,24 @@
+__pycache__/
+*.pyc
+.DS_Store
+.venv/
+
+# 案件フォルダは機密提案を含むため中身は git 管理しない（ローカル限定）。
+# ただしフォルダ自体は残すため .gitkeep のみ追跡する。
+projects/*
+!projects/.gitkeep
+
+# グローバルgitignoreの .claude/ 除外を上書きしてスキルを管理対象に含める
+!.claude/
+!.claude/skills/
+!.claude/skills/**
+
+# /slides-gen の中間生成物（soffice PDF / 視覚確認 PNG）は管理しない。
+# 機密提案をレンダリングした実体を含むため。生成のたびに再作成される。
+.claude/tmp/
+
+# Claude Code が作る隔離 worktree（機密案件の複製を含みうる）は管理しない。
+.claude/worktrees/
+
+# 上の !.claude/skills/** で .DS_Store の除外が打ち消されるため、ここで再除外する。
+.claude/**/.DS_Store
