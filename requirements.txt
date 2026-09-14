@@ -13,4 +13,4 @@ python-pptx==1.0.2
 PyMuPDF==1.28.2     # 5-a validate_render と 5-b render_pngs のレンダラ
 Pillow>=12.3.0
 requests>=2.34.2      # add_icon（アイコン使用時のみ）
-cairosvg>=2.9.0       # add_icon（アイコン使用時のみ）
+cairosvg>=2.9.1       # add_icon（アイコン使用時のみ）
